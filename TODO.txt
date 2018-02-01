@@ -1,0 +1,39 @@
+IF solo, ask for dummy player
+
+Deck Management:
+	Create
+	Shuffle
+	Sort
+	Deal
+	Destroy
+
+Options Menu:
+	Expansions
+		Default (all unchecked)
+	Customize
+		Decks
+			(List of checkboxes including or not)
+		Tokens
+
+
+When initializing scenario (on component will mount):
+	Create Map Tile deck (adding in starting tile), AA deck, Spells deck, Artifacts deck, Units decks, and Skills decks
+	Shuffle or sort map tile deck
+	Shuffle all remaining decks
+	Deal 3 units, 3 AAs, and 3 spells
+	Create token piles
+	Shuffle token piles
+	Draw tokens for starting map tiles
+	Set Fame and Reputation
+	Ask to set Turn Order
+	Set scenario Rules Reference in Options menu
+
+
+
+Change LinkedIn Status
+
+
+FIRST RECON FILTER
+	create array of keys -- Object.keys(mapG)
+		you now have an array of arrays
+	filter array by accepted number of G tiles -- .filter(key =>

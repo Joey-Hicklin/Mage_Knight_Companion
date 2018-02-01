@@ -1,0 +1,9 @@
+Advanced Action - 40
+Spells - 24
+Artifacts - 24
+Silver Units - 28
+Gold Units - 28
+Skills - 10 each character
+Coop Skills - 7
+
+
