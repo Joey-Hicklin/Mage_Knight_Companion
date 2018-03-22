@@ -6,9 +6,7 @@ import * as firstrecon from '../../Scenarios/firstRecon.js';
 import * as full from '../../Scenarios/full.js';
 import * as mines from '../../Scenarios/mines.js';
 
-import {mapG} from '../../Decks/mapG.js';
-import {mapB} from '../../Decks/mapB.js';
-import {mapC} from '../../Decks/mapC.js';
+import {mapDefinitions} from '../../Decks/mapTiles.js';
 // import advancedActionDeck from '../../Decks/advancedAction.js';
 // import spellDeck from '../../Decks/spell.js';
 // import artifactDeck from '../../Decks/artifact.js';
@@ -56,6 +54,9 @@ export const SHUFFLE_DRACONUM = 'SHUFFLE_DRACONUM';
 export const SHUFFLE_KEEP = 'SHUFFLE_KEEP';
 export const SHUFFLE_ANCIENT_RUINS = 'SHUFFLE_ANCIENT_RUINS';
 export const SHUFFLE_CITY = 'SHUFFLE_CITY';
+export const DRAW_TOKEN = 'DRAW_TOKEN';
+export const SHOW_TOKEN = 'SHOW_TOKEN';
+export const HIDE_TOKEN = 'HIDE_TOKEN';
 
 export const SHUFFLE_DECK = 'SHUFFLE_DECK';
 export const SORT_DECK = 'SORT_DECK';
@@ -66,7 +67,14 @@ export const INITIALIZE_DECK = 'INITIALIZE_DECK';
 export const SET_RULES = 'SET_RULES';
 export const CLEAR_RULES = 'CLEAR_RULES';
 
+export const START_MAP_GRID = 'START_MAP_GRID';
+export const DRAW_MAP_TILE = 'DRAW_MAP_TILE';
 
+
+
+const mapG = objFilter((val, key)=>{return(val[0] == 'G')}, mapDefinitions);
+const mapB = objFilter((val, key)=>{return(val[0] == 'B')}, mapDefinitions);
+const mapC = objFilter((val, key)=>{return(val[0] == 'C')}, mapDefinitions);
 
 
 export const selectCharacter = (data) => ({
@@ -128,6 +136,24 @@ export const createMapDeckB = (data) => {
 	})
 };
 
+export const startMapGrid = (data) => {
+	return({
+		type: START_MAP_GRID,
+		payload: data
+	})
+};
+
+export const drawMapTile = (location, tile, spaces) => {
+	return({
+		type: DRAW_MAP_TILE,
+		payload: {
+			location,
+			tile,
+			spaces
+		}
+	})
+};
+
 export const createDeck = (data) => {
 	return({
 		type: CREATE_DECK,
@@ -173,6 +199,32 @@ export const setRules = (data) => {
 export const clearRules = () => {
 	return({
 		type: CLEAR_RULES
+	});
+};
+
+export const drawToken = (type, location, spaceIndex, token) => {
+	return({
+		type: DRAW_TOKEN,
+		payload: {
+			type,
+			location,
+			spaceIndex,
+			token
+		}
+	});
+};
+
+export const showToken = (token) => {
+	return({
+		type: SHOW_TOKEN,
+		payload: token
+	});
+};
+
+export const hideToken = (token) => {
+	return({
+		type: HIDE_TOKEN,
+		payload: token
 	});
 };
 
@@ -231,6 +283,52 @@ export const resetRounds = () => {
 	})
 }
 
+export const initiateDrawMapTile = (location, tile, space, tokens) => (dispatch) => {
+
+
+	dispatch(drawMapTile(location, tile, space));
+
+	for (var i = space.length - 1; i >= 3; i--) {
+
+		switch(space[i]){
+
+			case "MO":
+				dispatch(drawToken("MO", location, i, tokens.mauraudingOrcs[0]));
+				break;
+			case "K":
+				dispatch(drawToken("K", location, i, tokens.keep[0]));
+				break;
+			case "MT":
+				dispatch(drawToken("MT", location, i, tokens.mageTower[0]));
+				break;
+			case "DUN":
+				dispatch(drawToken("DUN", location, i, tokens.dungeon[0]));
+				break;
+			case "AR":
+				dispatch(drawToken("AR", location, i, tokens.ancientRuin[0]));
+				break;
+			case "CB":
+			case "CG":
+			case "CW":
+			case "CR":
+				dispatch(drawToken("C", location, i, tokens.city[0]));
+				break;
+			case "DRA":
+				dispatch(drawToken("DRA", location, i, tokens.draconum[0]));
+				break;
+			
+		}
+	}
+
+	return('Success');
+};
+
+export const initGame = () => {
+	return({
+		type: INITIALIZE_GAME
+	})
+}
+
 export const initializeGame = (data) => (dispatch) => {
 
 	const regex = /[A-Z]/g.exec(data.scenario);
@@ -273,6 +371,8 @@ export const initializeGame = (data) => (dispatch) => {
 		rulesC: rules.cityTiles
 	}));
 
+	dispatch(startMapGrid(rules.mapShape));
+
 	dispatch(resetRounds())
 	dispatch(resetTurns());
 	dispatch(shuffleGreen());
@@ -283,6 +383,7 @@ export const initializeGame = (data) => (dispatch) => {
 	dispatch(shuffleBrown());
 	dispatch(shuffleRed());
 
+	dispatch(initGame());
 
 
 	return('Success');

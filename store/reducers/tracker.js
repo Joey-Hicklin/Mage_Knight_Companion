@@ -37,10 +37,66 @@ export const tracker = () => {
 		}
 	}
 
+	const gameStarted = (state=false, action) => {
+		switch(action.type) {
+			case 'INITIALIZE_GAME':
+				return true;
+				break;
+			default:
+				return state;
+				break;
+		}
+	}
+
+	const mapInitialized = (state=false, action) => {
+		switch(action.type) {
+			case 'DRAW_MAP_TILE':
+				return true;
+				break;
+			default:
+				return state;
+				break;
+		}
+	}
+
 	const continueGame = (state=false, action) => {
 		switch(action.type) {
 			case 'CREATE_MAP_DECK_G':
 				return (!state ? !state : state);
+				break;
+			default:
+				return state;
+				break;
+		}
+	}
+
+	const showToken = (state=false, action) => {
+		switch(action.type) {
+			case 'SHOW_TOKEN':
+				return true;
+				break;
+			case 'HIDE_TOKEN':
+				return false;
+				break;
+			case 'CHANGE_PAGE':
+				return false;
+				break;
+			default:
+				return state;
+				break;
+		}
+	}
+
+	const shownToken = (state={}, action) => {
+		switch(action.type) {
+			case 'SHOW_TOKEN':
+				return action.payload;
+				break;
+			case 'HIDE_TOKEN':
+				return {};
+				break;
+			case 'CHANGE_PAGE':
+				return {};
 				break;
 			default:
 				return state;
@@ -135,6 +191,38 @@ export const tracker = () => {
 				break;
 		}
 	}
+
+	const mapGrid = (state=[], action) => {
+		let tester;
+		switch(action.type) {
+
+			case 'START_MAP_GRID':
+				if (action.payload.includes("W")){
+					return [[{tile:"PA", spaces:['G','PA','BG','','','','','','','']}, "","OP"], ["", "OP"], ["OP"]];
+
+				} else if (action.payload.includes("O")){
+					return [["", "OP"],[{tile:"PB", spaces:['G','PB','BG','','','','','','','']}, "", "OP"], ["", "OP"], ["OP"]];
+
+				} else{
+					return state;
+				}
+				break;
+			case 'DRAW_MAP_TILE':
+				state[action.payload.location.row].splice(action.payload.location.column, 1, {tile:action.payload.tile, spaces: action.payload.spaces});
+				
+				return state;
+				break;
+			case 'DRAW_TOKEN':
+				state[action.payload.location.row][action.payload.location.column].spaces.splice(action.payload.spaceIndex, 1, action.payload.token);
+				
+				return state;
+				break;
+			default:
+				return state;
+				break;
+		}
+	}
+
 
 	const advancedActions = (state=[], action) => {
 		switch(action.type) {
@@ -235,8 +323,12 @@ export const tracker = () => {
 			case 'SHUFFLE_MAURAUDING_ORCS':
 				return shuffle(state);
 				break;
-			case 'DEAL_MAURAUDING_ORCS':
-				return state;
+			case 'DRAW_TOKEN':
+				if(action.payload.type == "MO"){
+					return state.splice(0,1);
+				}else{
+					return state;
+				}
 				break;
 			case 'DESTROY_MAURAUDING_ORCS':
 				return state;
@@ -253,8 +345,12 @@ export const tracker = () => {
 			case 'SHUFFLE_ANCIENT_RUINS':
 				return shuffle(state);
 				break;
-			case 'DEAL_ANCIENT_RUINS':
-				return state;
+			case 'DRAW_TOKEN':
+				if(action.payload.type == "AR"){
+					return state;
+				}else{
+					return state;
+				}
 				break;
 			case 'DESTROY_ANCIENT_RUINS':
 				return state;
@@ -271,8 +367,12 @@ export const tracker = () => {
 			case 'SHUFFLE_CITY':
 				return shuffle(state);
 				break;
-			case 'DEAL_CITY':
-				return state;
+			case 'DRAW_TOKEN':
+				if(action.payload.type == "C"){
+					return state;
+				}else{
+					return state;
+				}
 				break;
 			case 'DESTROY_CITY':
 				return state;
@@ -289,8 +389,12 @@ export const tracker = () => {
 			case 'SHUFFLE_DRACONUM':
 				return shuffle(state);
 				break;
-			case 'DEAL_DRACONUM':
-				return state;
+			case 'DRAW_TOKEN':
+				if(action.payload.type == "DRA"){
+					return state;
+				}else{
+					return state;
+				}
 				break;
 			case 'DESTROY_DRACONUM':
 				return state;
@@ -307,8 +411,12 @@ export const tracker = () => {
 			case 'SHUFFLE_DUNGEON':
 				return shuffle(state);
 				break;
-			case 'DEAL_DUNGEON':
-				return state;
+			case 'DRAW_TOKEN':
+				if(action.payload.type == "DUN"){
+					return state;
+				}else{
+					return state;
+				}
 				break;
 			case 'DESTROY_DUNGEON':
 				return state;
@@ -325,8 +433,12 @@ export const tracker = () => {
 			case 'SHUFFLE_KEEP':
 				return shuffle(state);
 				break;
-			case 'DEAL_KEEP':
-				return state;
+			case 'DRAW_TOKEN':
+				if(action.payload.type == "K"){
+					return state;
+				}else{
+					return state;
+				}
 				break;
 			case 'DESTROY_KEEP':
 				return state;
@@ -343,8 +455,12 @@ export const tracker = () => {
 			case 'SHUFFLE_MAGE_TOWER':
 				return shuffle(state);
 				break;
-			case 'DEAL_MAGE_TOWER':
-				return state;
+			case 'DRAW_TOKEN':
+				if(action.payload.type == "MT"){
+					return state;
+				}else{
+					return state;
+				}
 				break;
 			case 'DESTROY_MAGE_TOWER':
 				return state;
@@ -358,11 +474,16 @@ export const tracker = () => {
 	return combineReducers({
 		page,
 		entered,
+		mapInitialized,
+		gameStarted,
 		roundStarted,
 		continueGame,
+		showToken,
+		shownToken,
 		scenario,
 		rules,
 		mapTiles,
+		mapGrid,
 		advancedActions,
 		spells,
 		artifacts,

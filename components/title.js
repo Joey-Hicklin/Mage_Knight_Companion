@@ -13,6 +13,7 @@ import * as actions from '../store/actions/actions.js';
 // STYLES AND FUNCTIONS
 import { renderIf } from '../functions.js';
 import { styles } from '../styles.js';
+import { mapDefinitions } from '../Decks/mapTiles.js';
 
 
 
@@ -30,6 +31,51 @@ export class Title extends Component {
       GoldyxBW: require('../img/Characters/GoldyxBW.jpg'),
       TovakBW: require('../img/Characters/TovakBW.jpg'),
       NorowasBW: require('../img/Characters/NorowasBW.jpg'),
+    }
+  }
+
+  componentWillReceiveProps(newProps){
+
+    if(newProps.tracker.gameStarted && !newProps.tracker.mapInitialized){
+
+      const { mauraudingOrcs, ancientRuins, city, draconum, keep, mageTower } = newProps.tracker;
+      const tokens = { mauraudingOrcs, ancientRuins, city, draconum, keep, mageTower };
+
+      if(newProps.tracker.rules.mapShape.includes('W')){
+        newProps.initiateDrawMapTile(
+          {row: 1, column: 0 },
+          newProps.tracker.mapTiles[0],
+          mapDefinitions[newProps.tracker.mapTiles[0]],
+          tokens
+        );
+        newProps.initiateDrawMapTile(
+          {row: 0, column: 1 },
+          newProps.tracker.mapTiles[0],
+          mapDefinitions[newProps.tracker.mapTiles[0]],
+          tokens
+        );
+
+      }else if(newProps.tracker.rules.mapShape.includes('O')){
+        newProps.initiateDrawMapTile(
+          {row: 0, column: 0 },
+          newProps.tracker.mapTiles[0],
+          mapDefinitions[newProps.tracker.mapTiles[0]],
+          tokens
+        );
+            newProps.initiateDrawMapTile(
+              {row: 1, column: 1 },
+              newProps.tracker.mapTiles[0],
+              mapDefinitions[newProps.tracker.mapTiles[0]],
+              tokens
+          );
+            newProps.initiateDrawMapTile(
+              {row: 2, column: 0 },
+              newProps.tracker.mapTiles[0],
+              mapDefinitions[newProps.tracker.mapTiles[0]],
+              tokens
+          );
+      }
+      this.props.changePage('Turn Order');
     }
   }
 
@@ -108,9 +154,9 @@ export class Title extends Component {
                       // Only change page after dummyPlayer is set to TRUE or FALSE
                     this.props.initializeGame({
                       scenario: this.props.tracker.scenario,
-                      charNum: this.props.characters.selected.length
+                      charNum: this.props.characters.selected.length,
+                      mapTiles: this.props.tracker.mapTiles
                     });
-                    this.props.changePage('Turn Order');
                   }}
                   style={styles.continue}
                 >

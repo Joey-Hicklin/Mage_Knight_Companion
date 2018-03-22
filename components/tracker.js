@@ -110,7 +110,7 @@ export class Tracker extends Component {
                 }}
               >
                 <Image
-                  source={require('../img/Map_Tiles/PortalB.png')}
+                  source={require('../img/Map_Tiles/PB.png')}
                   resize={'contain'}
                   style={{width: '100%', height: '100%'}}
                 />
