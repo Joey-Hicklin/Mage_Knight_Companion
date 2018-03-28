@@ -71,9 +71,6 @@ export class TokenInfo extends Component {
         break;
       
     }
-
-    console.log(typeof this.state.imageSource);
-
   }
 
   componentWillUpdate() {         
@@ -81,8 +78,6 @@ export class TokenInfo extends Component {
   }
 
   render() {
-
-    console.log(typeof this.state.imageSource);
 
     const {shownToken} = this.props.tracker;
 
