@@ -1,6 +1,6 @@
 // REACT
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Text, Image, NativeModules, LayoutAnimation } from 'react-native';
+import { View, ScrollView, TouchableOpacity, Text, Image, NativeModules, LayoutAnimation } from 'react-native';
   // components
   import TokenRule from './tokenRule.js';
 
@@ -41,7 +41,7 @@ export class TokenInfo extends Component {
 
   state = {
     PA: require('../img/Map_Tiles/PA.png'),
-    tokenRuleFlex: 0,
+    tokenRuleFlex: 'none',
     tokenRuleOpacity: 0,
     imageSource: '',
   }
@@ -105,15 +105,11 @@ export class TokenInfo extends Component {
         height: '100%',
         backgroundColor: 'rgba(0,0,0,0.7)',
         position: 'absolute',
-        borderWidth: 3,
-        borderColor: 'white',
       }} >
 
 
           <View style={{
             flex: 1,
-            borderWidth: 3,
-            borderColor: 'green'
           }}>
 
             <Text style={{
@@ -131,9 +127,7 @@ export class TokenInfo extends Component {
 
           <View style={{
             flex: 5,
-            borderWidth: 3,
-            borderColor: 'yellow',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
           }}>
 
             <Image
@@ -142,18 +136,22 @@ export class TokenInfo extends Component {
                 flex: 1,
                 resizeMode: 'contain',
                 alignSelf: 'center',
-                borderColor: 'red',
-                borderWidth: 3
               }}
             />
             <View
               style={{
-                flex: this.state.tokenRuleFlex,
+                flex: 1,
+                display: this.state.tokenRuleFlex,
                 opacity: this.state.tokenRuleOpacity,
-                backgroundColor: 'white'
+              }}
+            >
+            <ScrollView
+              style={{
+                backgroundColor: 'white',
               }}
             >
               {tokenRules}
+            </ScrollView>
             </View>
 
           </View>
@@ -162,8 +160,6 @@ export class TokenInfo extends Component {
           <View
             style={{
               flex: 1,
-              borderWidth: 3,
-              borderColor: 'green',
               flexDirection: 'row',
               justifyContent: 'space-between'
             }}
@@ -200,14 +196,14 @@ export class TokenInfo extends Component {
                 alignItems: 'center'
               }}
               onPress={ () => {
-                if(this.state.tokenRuleFlex !== 1){
+                if(this.state.tokenRuleFlex !== 'flex'){
                   this.setState({
-                    tokenRuleFlex: 1,
+                    tokenRuleFlex: 'flex',
                     tokenRuleOpacity: 1,
                   });
                 } else {
                   this.setState({
-                    tokenRuleFlex: 0,
+                    tokenRuleFlex: 'none',
                     tokenRuleOpacity: 0,
                   });
                 }

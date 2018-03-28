@@ -79,18 +79,23 @@ export class TokenRule extends Component {
           style={{
             borderBottomWidth: 2,
             borderBottomColor: 'rgba(0,0,0,0.1)',
+            flex: 1,
+            flexDirection: 'row',
           }}
         >
 
           <Image
             source={this.state.imageSource}
+            resizeMode='contain'
             style={{
+              flex: 1,
             }}
           />
 
           <Text
             style={{
               fontSize: 25,
+              flex: 1,
             }}
           >{this.state.name}: {this.props.ruleValue}</Text>
         </View>
