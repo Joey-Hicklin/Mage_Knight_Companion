@@ -1,13 +1,11 @@
 export default keep = [
 	{
 		name: 'Crossbowmen',
-		number: 17,
-		attack: {
-			normal: 4,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 17,
+		physicalAttack: 4,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 3,
 		fortified: false,
@@ -29,13 +27,11 @@ export default keep = [
 	},
 	{
 		name: 'Crossbowmen',
-		number: 17,
-		attack: {
-			normal: 4,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 17,
+		physicalAttack: 4,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 3,
 		fortified: false,
@@ -57,13 +53,11 @@ export default keep = [
 	},
 	{
 		name: 'Crossbowmen',
-		number: 17,
-		attack: {
-			normal: 4,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 17,
+		physicalAttack: 4,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 3,
 		fortified: false,
@@ -85,13 +79,11 @@ export default keep = [
 	},
 	{
 		name: 'Guardsmen',
-		number: 18,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 18,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 3,
 		fortified: true,
@@ -113,13 +105,11 @@ export default keep = [
 	},
 	{
 		name: 'Guardsmen',
-		number: 18,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 18,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 3,
 		fortified: true,
@@ -141,13 +131,11 @@ export default keep = [
 	},
 	{
 		name: 'Guardsmen',
-		number: 18,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 18,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 3,
 		fortified: true,
@@ -169,13 +157,11 @@ export default keep = [
 	},
 	{
 		name: 'Swordsmen',
-		number: 19,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 19,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: false,
@@ -197,13 +183,11 @@ export default keep = [
 	},
 	{
 		name: 'Swordsmen',
-		number: 19,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 19,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: false,
@@ -225,13 +209,11 @@ export default keep = [
 	},
 	{
 		name: 'Golems',
-		number: 20,
-		attack: {
-			normal: 2,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 20,
+		physicalAttack: 2,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: true,
@@ -253,13 +235,11 @@ export default keep = [
 	},
 	{
 		name: 'Golems',
-		number: 20,
-		attack: {
-			normal: 2,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 20,
+		physicalAttack: 2,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: true,

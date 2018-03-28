@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import { Alert, View, TouchableOpacity, Image, PanResponder, Button, Text} from 'react-native';
   // components
-  import Title from './title.js';
   import EmptyMapTile from './emptyMapTile.js';
   import RevealedMapTile from './revealedMapTile.js';
+  import TokenInfo from './tokenInfo.js';
 
 // REDUX
 import { connect } from 'react-redux';
@@ -326,119 +326,7 @@ export class MapTiles extends Component {
         >
         </TouchableOpacity>
         {renderIf(this.props.tracker.showToken)(
-          <View style={{
-            flex: 1,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0,0,0,0.7)',
-            position: 'absolute',
-            borderWidth: 3,
-            borderColor: 'white',
-          }} >
-
-
-              <View style={{
-                flex: 1,
-              borderWidth: 3,
-              borderColor: 'green'
-              }}>
-
-                <Text style={{
-                  flex:1,
-                  color: 'white',
-                  fontSize: 40,
-                  textAlign: 'center',
-                  textAlignVertical: 'center',
-                }}>
-                  {this.props.tracker.shownToken.name}
-                </Text>
-
-              </View>
-
-
-              <View style={{
-                flex: 5,
-                borderWidth: 3,
-                borderColor: 'yellow',
-                justifyContent: 'center'
-              }}>
-
-                <Image
-                  source={require('../img/Tokens/sampleToken.png')}
-                  style={{resizeMode: 'contain', alignSelf: 'center',}}
-                />
-
-              </View>
-
-
-              <View
-                style={{
-                  flex: 1,
-                  borderWidth: 3,
-                  borderColor: 'green',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between'
-                }}
-              >
-                <TouchableOpacity
-                  
-                  style={{
-                    flex: 1,
-                    backgroundColor: 'red',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
-                  onPress={ () => {
-                      this.props.hideToken();
-                  }}
-                >
-                  <Text style={{
-                    fontSize: 40,
-                    color: 'white',
-                    fontWeight: 'bold'
-                  }}>Exit</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  
-                  style={{
-                    flex: 1,
-                    backgroundColor: 'blue',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
-                  onPress={ () => {
-                      alert('Here are the rules!');
-                  }}
-                >
-                  <Text style={{
-                    fontSize: 40,
-                    color: 'white',
-                    fontWeight: 'bold'
-                  }}>Rules</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  
-                  style={{
-                    flex: 1,
-                    backgroundColor: 'green',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
-                  onPress={ () => {
-                      alert('STAB IT NOW!!');
-                  }}
-                >
-                  <Text style={{
-                    fontSize: 40,
-                    color: 'white',
-                    fontWeight: 'bold'
-                  }}>Attack</Text>
-                </TouchableOpacity>
-
-              </View>
-            </View>
+          <TokenInfo />
         )}
       </View>
     );

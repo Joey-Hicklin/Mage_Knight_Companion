@@ -1,13 +1,11 @@
 export default dungeon = [
 	{
 		name: 'Minotaur',
-		number: 21,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 21,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: false,
@@ -29,13 +27,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Minotaur',
-		number: 21,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 21,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: false,
@@ -57,13 +53,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Gargoyle',
-		number: 22,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 22,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 4,
 		fortified: false,
@@ -85,13 +79,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Gargoyle',
-		number: 22,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 22,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 4,
 		fortified: false,
@@ -113,13 +105,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Medusa',
-		number: 23,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 23,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 5,
 		fortified: false,
@@ -141,13 +131,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Medusa',
-		number: 23,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 23,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 5,
 		fortified: false,
@@ -169,13 +157,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Crypt Worm',
-		number: 24,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 24,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 6,
 		fame: 5,
 		fortified: true,
@@ -197,13 +183,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Crypt Worm',
-		number: 24,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 24,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 6,
 		fame: 5,
 		fortified: true,
@@ -225,13 +209,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Werewolf',
-		number: 25,
-		attack: {
-			normal: 7,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 25,
+		physicalAttack: 7,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 5,
 		fortified: false,
@@ -253,13 +235,11 @@ export default dungeon = [
 	},
 	{
 		name: 'Werewolf',
-		number: 25,
-		attack: {
-			normal: 7,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 25,
+		physicalAttack: 7,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 5,
 		fortified: false,

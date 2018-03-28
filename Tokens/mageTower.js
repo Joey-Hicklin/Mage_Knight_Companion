@@ -1,13 +1,11 @@
 export default mageTower = [
 	{
 		name: 'Monks',
-		number: 7,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 7,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: false,
@@ -29,13 +27,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Monks',
-		number: 7,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 7,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 4,
 		fortified: false,
@@ -57,13 +53,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Ice Mages',
-		number: 8,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 5,
-			coldFire: 0
-		},
+		tokenNumber: 8,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 5,
+		coldFireAttack: 0,
 		defense: 6,
 		fame: 5,
 		fortified: false,
@@ -85,13 +79,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Ice Mages',
-		number: 8,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 5,
-			coldFire: 0
-		},
+		tokenNumber: 8,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 5,
+		coldFireAttack: 0,
 		defense: 6,
 		fame: 5,
 		fortified: false,
@@ -113,13 +105,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Fire Mages',
-		number: 9,
-		attack: {
-			normal: 0,
-			fire: 6,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 9,
+		physicalAttack: 0,
+		fireAttack: 6,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 5,
 		fortified: false,
@@ -141,13 +131,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Fire Mages',
-		number: 9,
-		attack: {
-			normal: 0,
-			fire: 6,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 9,
+		physicalAttack: 0,
+		fireAttack: 6,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 5,
 		fortified: false,
@@ -169,13 +157,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Illusionists',
-		number: 10,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 10,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 4,
 		fortified: false,
@@ -197,13 +183,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Illusionists',
-		number: 10,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 10,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 4,
 		fortified: false,
@@ -225,13 +209,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Ice Golems',
-		number: 11,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 2,
-			coldFire: 0
-		},
+		tokenNumber: 11,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 2,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 5,
 		fortified: false,
@@ -253,13 +235,11 @@ export default mageTower = [
 	},
 	{
 		name: 'Fire Golems',
-		number: 12,
-		attack: {
-			normal: 0,
-			fire: 3,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 12,
+		physicalAttack: 0,
+		fireAttack: 3,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 5,
 		fortified: false,

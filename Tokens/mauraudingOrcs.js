@@ -1,13 +1,11 @@
 export default mauraudingOrcs = [
 	{
 		name: 'Prowlers',
-		number: 1,
-		attack: {
-			normal: 4,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 1,
+		physicalAttack: 4,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 2,
 		fortified: false,
@@ -29,13 +27,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Prowlers',
-		number: 1,
-		attack: {
-			normal: 4,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 1,
+		physicalAttack: 4,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 2,
 		fortified: false,
@@ -57,13 +53,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Diggers',
-		number: 2,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 2,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 2,
 		fortified: true,
@@ -85,13 +79,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Diggers',
-		number: 2,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 2,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 2,
 		fortified: true,
@@ -113,13 +105,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Cursed Hags',
-		number: 3,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 3,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 3,
 		fortified: false,
@@ -141,13 +131,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Cursed Hags',
-		number: 3,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 3,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 5,
 		fame: 3,
 		fortified: false,
@@ -169,13 +157,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Wolf Riders',
-		number: 4,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 4,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 3,
 		fortified: false,
@@ -197,13 +183,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Wolf Riders',
-		number: 4,
-		attack: {
-			normal: 3,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 4,
+		physicalAttack: 3,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 3,
 		fortified: false,
@@ -225,13 +209,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Ironclads',
-		number: 5,
-		attack: {
-			normal: 4,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 5,
+		physicalAttack: 4,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 4,
 		fortified: false,
@@ -253,13 +235,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Ironclads',
-		number: 5,
-		attack: {
-			normal: 4,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 5,
+		physicalAttack: 4,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 3,
 		fame: 4,
 		fortified: false,
@@ -281,13 +261,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Orc Summoners',
-		number: 6,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 6,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 4,
 		fortified: false,
@@ -309,13 +287,11 @@ export default mauraudingOrcs = [
 	},
 	{
 		name: 'Orc Summoners',
-		number: 6,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 6,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 4,
 		fame: 4,
 		fortified: false,

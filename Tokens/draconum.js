@@ -1,13 +1,11 @@
 export default draconum = [
 	{
 		name: 'Swamp Dragon',
-		number: 26,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 26,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 9,
 		fame: 7,
 		fortified: false,
@@ -29,13 +27,11 @@ export default draconum = [
 	},
 	{
 		name: 'Swamp Dragon',
-		number: 26,
-		attack: {
-			normal: 5,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 26,
+		physicalAttack: 5,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 9,
 		fame: 7,
 		fortified: false,
@@ -57,13 +53,11 @@ export default draconum = [
 	},
 	{
 		name: 'Fire Dragon',
-		number: 27,
-		attack: {
-			normal: 0,
-			fire: 9,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 27,
+		physicalAttack: 0,
+		fireAttack: 9,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 8,
 		fortified: false,
@@ -85,13 +79,11 @@ export default draconum = [
 	},
 	{
 		name: 'Fire Dragon',
-		number: 27,
-		attack: {
-			normal: 0,
-			fire: 9,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 27,
+		physicalAttack: 0,
+		fireAttack: 9,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 8,
 		fortified: false,
@@ -113,13 +105,11 @@ export default draconum = [
 	},
 	{
 		name: 'Ice Dragon',
-		number: 28,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 6,
-			coldFire: 0
-		},
+		tokenNumber: 28,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 6,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 8,
 		fortified: false,
@@ -141,13 +131,11 @@ export default draconum = [
 	},
 	{
 		name: 'Ice Dragon',
-		number: 28,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 6,
-			coldFire: 0
-		},
+		tokenNumber: 28,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 6,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 8,
 		fortified: false,
@@ -169,13 +157,11 @@ export default draconum = [
 	},
 	{
 		name: 'High Dragon',
-		number: 29,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 6
-		},
+		tokenNumber: 29,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 6,
 		defense: 9,
 		fame: 9,
 		fortified: false,
@@ -197,13 +183,11 @@ export default draconum = [
 	},
 	{
 		name: 'High Dragon',
-		number: 29,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 6
-		},
+		tokenNumber: 29,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 6,
 		defense: 9,
 		fame: 9,
 		fortified: false,

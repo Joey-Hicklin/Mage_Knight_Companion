@@ -1,0 +1,6 @@
+Side A spacing:
+	Row 1 -- X = col# * 342.5 -- Y = -(col# * 297)
+	Row 2 -- START (-85, -445)
+	Row 3 -- START (-170, -445)
+	Row X -- START-Y = (row# - 1) * -(445) -- START-X[ODD-ROW] = -170 -- START-X[EVEN-ROW] = -85
+	Col X -- X = START + (col# * 342.5) -- Y = START + -(col# * 297)

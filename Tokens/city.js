@@ -1,13 +1,11 @@
 export default city = [
 	{
 		name: 'Freezers',
-		number: 13,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 3,
-			coldFire: 0
-		},
+		tokenNumber: 13,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 3,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 7,
 		fortified: false,
@@ -29,13 +27,11 @@ export default city = [
 	},
 	{
 		name: 'Freezers',
-		number: 13,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 3,
-			coldFire: 0
-		},
+		tokenNumber: 13,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 3,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 7,
 		fortified: false,
@@ -57,13 +53,11 @@ export default city = [
 	},
 	{
 		name: 'Freezers',
-		number: 13,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 3,
-			coldFire: 0
-		},
+		tokenNumber: 13,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 3,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 7,
 		fortified: false,
@@ -85,13 +79,11 @@ export default city = [
 	},
 	{
 		name: 'Gunners',
-		number: 14,
-		attack: {
-			normal: 0,
-			fire: 6,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 14,
+		physicalAttack: 0,
+		fireAttack: 6,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 6,
 		fame: 7,
 		fortified: false,
@@ -113,13 +105,11 @@ export default city = [
 	},
 	{
 		name: 'Gunners',
-		number: 14,
-		attack: {
-			normal: 0,
-			fire: 6,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 14,
+		physicalAttack: 0,
+		fireAttack: 6,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 6,
 		fame: 7,
 		fortified: false,
@@ -141,13 +131,11 @@ export default city = [
 	},
 	{
 		name: 'Gunners',
-		number: 14,
-		attack: {
-			normal: 0,
-			fire: 6,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 14,
+		physicalAttack: 0,
+		fireAttack: 6,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 6,
 		fame: 7,
 		fortified: false,
@@ -169,13 +157,11 @@ export default city = [
 	},
 	{
 		name: 'Altem Guardsmen',
-		number: 15,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 15,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 8,
 		fortified: true,
@@ -197,13 +183,11 @@ export default city = [
 	},
 	{
 		name: 'Altem Guardsmen',
-		number: 15,
-		attack: {
-			normal: 6,
-			fire: 0,
-			ice: 0,
-			coldFire: 0
-		},
+		tokenNumber: 15,
+		physicalAttack: 6,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 0,
 		defense: 7,
 		fame: 8,
 		fortified: true,
@@ -225,13 +209,11 @@ export default city = [
 	},
 	{
 		name: 'Altem Mages',
-		number: 16,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 4
-		},
+		tokenNumber: 16,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 4,
 		defense: 8,
 		fame: 8,
 		fortified: true,
@@ -253,13 +235,11 @@ export default city = [
 	},
 	{
 		name: 'Altem Mages',
-		number: 16,
-		attack: {
-			normal: 0,
-			fire: 0,
-			ice: 0,
-			coldFire: 4
-		},
+		tokenNumber: 16,
+		physicalAttack: 0,
+		fireAttack: 0,
+		iceAttack: 0,
+		coldFireAttack: 4,
 		defense: 8,
 		fame: 8,
 		fortified: true,
